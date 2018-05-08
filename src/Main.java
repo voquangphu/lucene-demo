@@ -1,4 +1,5 @@
 import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.core.WhitespaceAnalyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
@@ -18,7 +19,7 @@ public class Main {
     public static void main(String args[]) {
 
         try {
-            Analyzer analyzer = new StandardAnalyzer();
+            Analyzer analyzer = new WhitespaceAnalyzer();
 
             // Store the index in memory:
             Directory directory = new RAMDirectory();
